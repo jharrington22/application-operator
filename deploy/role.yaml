@@ -39,7 +39,7 @@ rules:
   - get
   - create
 - apiGroups:
-  - application.examplle.com
+  - application.example.com
   resources:
   - '*'
   verbs:

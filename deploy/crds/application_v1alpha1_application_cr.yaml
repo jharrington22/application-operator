@@ -1,7 +1,9 @@
-apiVersion: application.examplle.com/v1alpha1
+apiVersion: application.example.com/v1alpha1
 kind: Application
 metadata:
   name: example-application
+  namespace: application-operator-ns
 spec:
   # Add fields here
-  size: 3
+  replicas: 2
+  applicationVersion: "bitnami/nginx"
