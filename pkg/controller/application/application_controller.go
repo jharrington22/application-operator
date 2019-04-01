@@ -164,7 +164,6 @@ func (r *ReconcileApplication) Reconcile(request reconcile.Request) (reconcile.R
 				return reconcile.Result{}, err
 			}
 		}
-		err = r.client.Status().Update(context.TODO(), found)
 		// Deployment exists and was updated - don't requeue
 		reqLogger.Info("Skip reconcile: Deployment exists and was updated", "Deployment.Namespace", found.Namespace, "Deployment.Name", found.Name)
 		return reconcile.Result{}, nil

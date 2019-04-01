@@ -3,6 +3,13 @@ kind: CustomResourceDefinition
 metadata:
   name: applications.application.example.com
 spec:
+  additionalPrinterColumns:
+  - JSONPath: .spec.replicas
+    name: Replicas
+    type: integer
+  - JSONPath: .spec.applicationVersion
+    name: ApplicationVersion
+    type: string
   group: application.example.com
   names:
     kind: Application
